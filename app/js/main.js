@@ -15,7 +15,7 @@ function scrollToLink() {
 scrollToLink();
 
 function modal() {
-  const btns = document.querySelectorAll(".request-btn");
+  const btns = document.querySelectorAll(".modal-btn");
   const modalOverlay = document.querySelector(".modal-overlay ");
   const modals = document.querySelectorAll(".modal");
   const modalCloseBtn = document.querySelector(".close-btn");
