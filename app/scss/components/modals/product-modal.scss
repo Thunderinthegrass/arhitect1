@@ -1,5 +1,131 @@
-.product__modal{
+.product__modal {
   width: 1200px;
   height: 800px;
   background: #ffffff;
+  padding: 60px 50px 50px;
+  background: #E9E9E9;
+  position: relative;
+  .close-btn{
+    position: absolute;
+  }
+  .catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &__info-text {
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 170%;
+      color: #474747;
+    }
+    &__request-btn{
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+      padding: 14.5px 0;
+      background: #660000;
+      text-align: center;
+      transition: 0.3s;
+      width: 100%;
+      cursor: pointer;
+      &:hover {
+        color: #1f1f1f;
+        background: #ffffff;
+      }
+      &:active {
+        color: #1f1f1f !important;
+        background: #a5a5a5 !important;
+      }
+    }
+  }
+  .catalog__slider {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .catalog__slider-top {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+    }
+    .slider-top__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #1f1f1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s;
+      .slider-arrow {
+        width: 18px;
+        height: 14px;
+        opacity: 1;
+      }
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+    }
+    .swiper-button-prev {
+      left: 10px;
+    }
+    .swiper-button-next {
+      right: 10px;
+      .slider-arrow {
+        transform: rotate(180deg);
+      }
+    }
+    .swiper-wrapper {
+      display: inline-flex;
+    }
+  }
+  .catalog__slider-thumbs {
+    .swiper-slide {
+      transition: 0.3s;
+      position: relative;
+      width: 60px !important;
+      height: 60px;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #660000;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      .slider-thumbs__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .swiper-slide-thumb-active {
+      &::before {
+        opacity: 1;
+      }
+    }
+    .swiper-wrapper {
+      display: flex;
+      transform: translate3d(0px, 0px, 0px);
+    }
+  }
 }

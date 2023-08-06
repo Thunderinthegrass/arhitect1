@@ -18,7 +18,7 @@ function modal() {
   const btns = document.querySelectorAll(".modal-btn");
   const modalOverlay = document.querySelector(".modal-overlay ");
   const modals = document.querySelectorAll(".modal");
-  const modalCloseBtn = document.querySelector(".close-btn");
+  const modalCloseBtn = document.querySelectorAll(".close-btn");
   // const close = document.querySelectorAll(".close");
 
   btns.forEach((el) => {
@@ -47,14 +47,16 @@ function modal() {
       }
   });
 
-  modalCloseBtn.addEventListener("click", (e) => {
-    // document.body.classList.remove('ov-hidden');
-    
-    modalOverlay.classList.remove("modal-overlay--visible");
-    modals.forEach((el) => {
-      el.classList.remove("modal--visible");
+  modalCloseBtn.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      // document.body.classList.remove('ov-hidden');
+      
+      modalOverlay.classList.remove("modal-overlay--visible");
+      modals.forEach((el) => {
+        el.classList.remove("modal--visible");
+      });
     });
-  });
+  })
 }
 modal();
 
@@ -157,6 +159,22 @@ const productsSwiperTorrazzo = new Swiper(".products__slider-torrazzo", {
       spaceBetween: 30,
     },
   }
+});
+
+const catalogSliderThumbs = new Swiper(".catalog__slider-thumbs", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+const catalogSliderTop = new Swiper(".catalog__slider-top", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: catalogSliderThumbs,
+  },
 });
 
 // изменение хедера при прокрутке и прилипании
