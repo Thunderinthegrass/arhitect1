@@ -160,10 +160,10 @@ section{
   cursor: pointer;
   transition: 0.3s;
   &:hover {
-    background: #660000;
+    background: #1f1f1f;
   }
   &:active {
-    background: rgba(255, 255, 255, 0.6);
+    background: #660000;
   }
   .modal-close-icon {
     position: absolute;

@@ -19,6 +19,10 @@ function modal() {
   const modalOverlay = document.querySelector(".modal-overlay ");
   const modals = document.querySelectorAll(".modal");
   const modalCloseBtn = document.querySelectorAll(".close-btn");
+  const catalogRequestBtn = document.querySelectorAll('.catalog__request-btn');
+  const modalForm = document.querySelector('.modal-form');
+  
+  
   // const close = document.querySelectorAll(".close");
 
   btns.forEach((el) => {
@@ -30,12 +34,20 @@ function modal() {
         el.classList.remove("modal--visible");
       });
 
-      document
-        .querySelector(`[data-target="${path}"]`)
-        .classList.add("modal--visible");
+      if (document.querySelector(`[data-target="${path}"]`)) {
+        document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
+      }
         modalOverlay.classList.add("modal-overlay--visible");
     });
   });
+
+  //модалка каталога
+  catalogRequestBtn.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      modalForm.classList.add('modal--visible');
+
+    })
+  }) 
 
   modalOverlay.addEventListener("click", (e) => {
     // document.body.classList.remove('ov-hidden');
@@ -162,7 +174,7 @@ const productsSwiperTorrazzo = new Swiper(".products__slider-torrazzo", {
 });
 
 const catalogSliderThumbs = new Swiper(".catalog__slider-thumbs", {
-  spaceBetween: 10,
+  spaceBetween: 12,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
