@@ -174,10 +174,15 @@ const productsSwiperTorrazzo = new Swiper(".products__slider-torrazzo", {
 });
 
 const catalogSliderThumbs = new Swiper(".catalog__slider-thumbs", {
-  spaceBetween: 12,
+  spaceBetween: 0,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {// настройки для разных разрешений
+    767: {
+      spaceBetween: 12,
+    },
+  }
 });
 const catalogSliderTop = new Swiper(".catalog__slider-top", {
   navigation: {
