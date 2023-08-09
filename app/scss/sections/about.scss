@@ -94,4 +94,9 @@
       gap: 30px;
     }
   }
+  @media (max-width: 330px){
+    .about__title::after{
+      font-size: 45px;
+    }
+  }
 }

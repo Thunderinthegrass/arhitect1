@@ -1413,6 +1413,11 @@ section {
     gap: 30px;
   }
 }
+@media (max-width: 330px) {
+  .about .about__title::after {
+    font-size: 45px;
+  }
+}
 
 .advantages {
   position: relative;
@@ -1852,6 +1857,7 @@ section {
   height: 300px;
   margin-bottom: 25px;
   overflow: hidden;
+  cursor: pointer;
 }
 .products .product__img {
   width: 100%;
@@ -1876,6 +1882,11 @@ section {
   margin-bottom: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
 }
 .products .product__more-btn {
   position: absolute;
@@ -1904,6 +1915,7 @@ section {
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  cursor: pointer;
 }
 .products .product__bottom {
   display: -webkit-box;
@@ -2043,6 +2055,10 @@ section {
     padding-right: 0;
   }
 }
+
+.services__cotainer {
+  max-width: 100%;
+}
 @supports (-webkit-appearance:none){
 .modal-form__img{background-image:url(../img/modal-form/modal-form-img.webp)}
 .product__modal .parameter-name::after{background-image:url(../img/product-modal/line.svg)}
@@ -2131,6 +2147,14 @@ section {
 }
 
  @media (max-width: 1640px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 330px){
 
 @supports (-webkit-appearance:none){
 

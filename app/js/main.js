@@ -1,77 +1,4 @@
-function scrollToLink() {
-  const anchors = document.querySelectorAll('a[href*="#"]');
-
-  for (let anchor of anchors) {
-    anchor.addEventListener("click", function (event) {
-      event.preventDefault();
-      const blockID = anchor.getAttribute("href");
-      document.querySelector("" + blockID).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }
-}
-scrollToLink();
-
-function modal() {
-  const btns = document.querySelectorAll(".modal-btn");
-  const modalOverlay = document.querySelector(".modal-overlay ");
-  const modals = document.querySelectorAll(".modal");
-  const modalCloseBtn = document.querySelectorAll(".close-btn");
-  const catalogRequestBtn = document.querySelectorAll('.catalog__request-btn');
-  const modalForm = document.querySelector('.modal-form');
-  
-  
-  // const close = document.querySelectorAll(".close");
-
-  btns.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      // document.body.classList.add('ov-hidden');
-      let path = e.currentTarget.getAttribute("data-path");
-
-      modals.forEach((el) => {
-        el.classList.remove("modal--visible");
-      });
-
-      if (document.querySelector(`[data-target="${path}"]`)) {
-        document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
-      }
-        modalOverlay.classList.add("modal-overlay--visible");
-    });
-  });
-
-  //модалка каталога
-  catalogRequestBtn.forEach((elem) => {
-    elem.addEventListener('click', () => {
-      modalForm.classList.add('modal--visible');
-
-    })
-  }) 
-
-  modalOverlay.addEventListener("click", (e) => {
-    // document.body.classList.remove('ov-hidden');
-      if (e.target == modalOverlay) {
-        modalOverlay.classList.remove("modal-overlay--visible");
-        modals.forEach((el) => {
-          el.classList.remove("modal--visible");
-        });
-      }
-  });
-
-  modalCloseBtn.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-      // document.body.classList.remove('ov-hidden');
-      
-      modalOverlay.classList.remove("modal-overlay--visible");
-      modals.forEach((el) => {
-        el.classList.remove("modal--visible");
-      });
-    });
-  })
-}
-modal();
-
+//слайдера
 const heroSwiper = new Swiper(".hero__slider", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -194,6 +121,116 @@ const catalogSliderTop = new Swiper(".catalog__slider-top", {
   },
 });
 
+//плавный скролл к ссылкам
+function scrollToLink() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+scrollToLink();
+
+//модальные окна
+function modal() {
+  const btns = document.querySelectorAll(".modal-btn");
+  const modalOverlay = document.querySelector(".modal-overlay ");
+  const modals = document.querySelectorAll(".modal");
+  const modalCloseBtn = document.querySelectorAll(".close-btn");
+  const catalogRequestBtn = document.querySelectorAll('.catalog__request-btn');
+  const modalForm = document.querySelector('.modal-form');
+  
+  
+  // const close = document.querySelectorAll(".close");
+
+  btns.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      // document.body.classList.add('ov-hidden');
+      let path = e.currentTarget.getAttribute("data-path");
+
+      modals.forEach((el) => {
+        el.classList.remove("modal--visible");
+      });
+
+      if (document.querySelector(`[data-target="${path}"]`)) {
+        document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
+      }
+        modalOverlay.classList.add("modal-overlay--visible");
+    });
+  });
+
+  //модалка каталога
+  catalogRequestBtn.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      modalForm.classList.add('modal--visible');
+
+    })
+  }) 
+
+  modalOverlay.addEventListener("click", (e) => {
+    // document.body.classList.remove('ov-hidden');
+      if (e.target == modalOverlay) {
+        modalOverlay.classList.remove("modal-overlay--visible");
+        modals.forEach((el) => {
+          el.classList.remove("modal--visible");
+        });
+      }
+  });
+
+  modalCloseBtn.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      // document.body.classList.remove('ov-hidden');
+      
+      modalOverlay.classList.remove("modal-overlay--visible");
+      modals.forEach((el) => {
+        el.classList.remove("modal--visible");
+      });
+    });
+  })
+}
+modal();
+
+//placeholder инпутов
+let placeholder = () => {
+  let input = document.querySelectorAll('.modal-form__item');
+  let label = document.querySelectorAll('.label');
+  
+  input.forEach((elem, id) => {
+    elem.addEventListener('blur', () => {
+      if (elem.value != '') {
+        label[id].classList.add('active');
+      }
+      else {
+        label[id].classList.remove('active');
+      }
+      console.log(elem.value);
+    })
+  })
+}
+placeholder();
+
+//увеличивающаяся по мере заполняемости текстом textarea
+let textareaTransfer = () => {
+  let textarea = document.querySelector('.modal-form__textarea');
+  
+
+  textarea.setAttribute('style', 'height:' + (textarea.scrollHeight) + 'px;overflow-y:hidden;');
+  textarea.addEventListener("input", OnInput, false);
+
+  function OnInput() {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  }
+}
+textareaTransfer();
+
 // изменение хедера при прокрутке и прилипании
 let scroll = () => {
   if (document.body.clientWidth <= 1110) {
@@ -236,42 +273,7 @@ nav.querySelectorAll("a, button").forEach((elem) => {
   });
 });
 
-//placeholder инпутов
-let placeholder = () => {
-  let input = document.querySelectorAll('.modal-form__item');
-  let label = document.querySelectorAll('.label');
-  
-  input.forEach((elem, id) => {
-    elem.addEventListener('blur', () => {
-      if (elem.value != '') {
-        label[id].classList.add('active');
-      }
-      else {
-        label[id].classList.remove('active');
-      }
-      console.log(elem.value);
-    })
-  })
-}
-placeholder();
-
-//увеличивающаяся по мере заполняемости текстом textarea
-let textareaTransfer = () => {
-  let textarea = document.querySelector('.modal-form__textarea');
-  
-
-  textarea.setAttribute('style', 'height:' + (textarea.scrollHeight) + 'px;overflow-y:hidden;');
-  textarea.addEventListener("input", OnInput, false);
-
-  function OnInput() {
-    this.style.height = 'auto';
-    this.style.height = (this.scrollHeight) + 'px';
-  }
-}
-textareaTransfer();
-
 //табы преимущества
-
 let stageTabs = () => {
   let tabBtn = document.querySelectorAll('.stages__name-wrapper');
   let tabInfo = document.querySelectorAll('.stages__info');
@@ -313,6 +315,19 @@ let stageTabs = () => {
 }
 stageTabs();
 
+//размер контейнера секции about в зависимости от ширины экрана
+let aboutWidth = () => {
+  let container = document.querySelector('.about__container');
+  let width = document.documentElement.clientWidth;
+
+  if (width > 1920) {
+    let paddingContainer = (width - 1760) / 2;
+    container.style.paddingRight = `${paddingContainer}px`;
+  }
+}
+aboutWidth();
+
+//фильтр продуктов
 let productsFilters = () => {
   const btn = document.querySelectorAll('.filters__btn');
   const productsSlider = document.querySelectorAll('.products__slider');
