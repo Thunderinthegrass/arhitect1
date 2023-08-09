@@ -31,7 +31,7 @@
           <ul class="nav__list">
             <li class="nav__item"><a href="#products" class="nav__link">Продукция</a></li>
             <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
           </ul>
@@ -878,17 +878,21 @@
         </div>
       </div>
     </section>
-    <section class="services">
-      <div class="contaier services__container">
-        <h2 class="section-title">
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="services__title section-title">
           Услуги
         </h2>
+      </div>
+      <div class="contaier services__container">
         <div class="services__item">
           <div class="services__item-info">
-            <h3 class="services__item-title">Строительно-монтажные работы</h3>
-            <p class="services__descr">Работы любой сложности выполненные в утвержденные сроки и бюджет.</p>
+            <h3 class="services__item-title h3-title">
+              Строительно-монтажные работы
+            </h3>
+            <p class="services__item-text">Работы любой сложности выполненные в утвержденные сроки и бюджет.</p>
             <div class="services__item-bottom">
-              <button class="services__order-btn request-btn modal-btn" type="button" aria-label="заказать">
+              <button class="services__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
               Заказать
               </button>
               <p class="services__price-wrapper">
@@ -898,8 +902,50 @@
               </p>
             </div>
           </div>
-          <div class="services__item-img">
-            
+          <div class="services__item-img-wrapper">
+            <img src="img/services/servises1.jpg" class="services__item-img" alt="картинка услуги">
+          </div>
+        </div>
+        <div class="services__item">
+          <div class="services__item-info">
+            <h3 class="services__item-title h3-title">
+              Создание полов по технологии терраццо 
+            </h3>
+            <p class="services__item-text">Неповторимые полы по древней технологии для Вашего интерьера и наружных пространств.</p>
+            <div class="services__item-bottom">
+              <button class="services__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+              Заказать
+              </button>
+              <p class="services__price-wrapper">
+                от
+                <span class="services__price">5000</span>
+                &#8381;
+              </p>
+            </div>
+          </div>
+          <div class="services__item-img-wrapper">
+            <img src="img/services/servises2.jpg" class="services__item-img" alt="картинка услуги">
+          </div>
+        </div>
+        <div class="services__item">
+          <div class="services__item-info">
+            <h3 class="services__item-title h3-title">
+              Создание и монтаж изделий из архитектурного фибробетона
+            </h3>
+            <p class="services__item-text">Изделия из стеклофибробетона под требования Вашего объекта реализующие любые задумки.</p>
+            <div class="services__item-bottom">
+              <button class="services__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+              Заказать
+              </button>
+              <p class="services__price-wrapper">
+                от
+                <span class="services__price">5000</span>
+                &#8381;
+              </p>
+            </div>
+          </div>
+          <div class="services__item-img-wrapper">
+            <img src="img/services/servises3.jpg" class="services__item-img" alt="картинка услуги">
           </div>
         </div>
       </div>

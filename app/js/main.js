@@ -359,3 +359,25 @@ let productsFilters = () => {
   
 }
 productsFilters();
+
+//услуги
+let servicesWidth = () => {
+  let width = document.documentElement.clientWidth;
+  const item = document.querySelectorAll('.services__item');
+  
+  if (width > 1920) {
+    let padding = (width - 1760) / 2;
+
+    item.forEach((elem, id) => {
+      if (id % 2 == 0) {
+        elem.style.paddingRight = `${padding}px`;
+        elem = elem.querySelector('.services__item-info');
+        elem.style.paddingLeft = `${padding}px`;
+      }
+      else {
+        elem.style.paddingLeft = `${padding}px`;
+      }
+    })
+  }
+}
+servicesWidth();
