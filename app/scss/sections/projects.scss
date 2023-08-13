@@ -1,0 +1,127 @@
+.projects {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__slider{
+    overflow: hidden;
+    padding-bottom: 94px;
+    position: relative;
+    .swiper-wrapper{
+      display: inline-flex;
+    }
+    .slider-arrows {
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &-swiper-pagination{
+    bottom: 28px;
+  }
+  .project {
+    max-width: 835px;
+    width: 100%;
+    padding-bottom: 30px;
+    border: 1px solid #474747;
+    position: relative;
+    flex-shrink: 0;
+    &:hover{
+      .project__img{
+        transform: scale(1.1);
+      }
+      .project__title{
+        color: rgba(255, 255, 255, 0.60);
+      }
+      .project__arrow{
+        fill: rgba(255, 255, 255, 0.60);
+      }
+    }
+    &:active{
+      .project__title{
+        color: #474747;
+      }
+      .project__arrow{
+        fill: #474747;
+      }
+    }
+    &__more-btn{
+      position: absolute;
+      top: 410px;
+      right: 20px;
+      cursor: pointer;
+    }
+    &__arrow{
+      width: 30px;
+      height: 30px;
+      transform: rotate(90deg);
+      fill: #ffffff;
+      transition: .3s;
+    }
+    &__img-wrapper {
+      width: 100%;
+      height: 380px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: .3s;
+    }
+    &__info {
+      min-height: 182px;
+      padding-left: 30px;
+      cursor: pointer;
+    }
+    &__title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+      margin-bottom: 15px;
+      padding-right: 65px;
+      transition: .3s;
+    }
+    &__subtitle {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 170%;
+      color: rgba(255, 255, 255, 0.60);
+    }
+    &__bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding: 0 30px;
+    }
+    &__logo-wrapper{
+      width: 173px;
+      height: 70px;
+    }
+    &__logo{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__order-btn{
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 140%;
+      color: #ffffff;
+      background: #660000;
+      width: 300px;
+      height: 60px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: #1f1f1f;
+        background: #ffffff;
+      }
+      &:active {
+        color: #1f1f1f;
+        background: #a5a5a5;
+      }
+    }
+  }
+}

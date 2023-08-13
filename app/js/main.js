@@ -121,6 +121,39 @@ const catalogSliderTop = new Swiper(".catalog__slider-top", {
   },
 });
 
+const projectsSlider = new Swiper(".projects__slider", {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".project-swiper-button-next",
+    prevEl: ".project-swiper-button-prev",
+  },
+  pagination: {
+    el: ".projects-swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+  breakpoints: {// настройки для разных разрешений
+    1480: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    }
+  }
+});
+
+const projectModalSlider = new Swiper(".project-modal__slider", {
+  navigation: {
+    nextEl: ".project-slider-button-next",
+    prevEl: ".project-slider-button-prev",
+  },
+  pagination: {
+    el: ".project-modal__pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});
+
 //плавный скролл к ссылкам
 function scrollToLink() {
   const anchors = document.querySelectorAll('a[href*="#"]');
@@ -366,7 +399,7 @@ let servicesWidth = () => {
   const item = document.querySelectorAll('.services__item');
   
   if (width > 1920) {
-    let padding = (width - 1760) / 2;
+    let padding = (width - 1760) / 2 + 20;
 
     item.forEach((elem, id) => {
       if (id % 2 == 0) {
@@ -376,6 +409,7 @@ let servicesWidth = () => {
       }
       else {
         elem.style.paddingLeft = `${padding}px`;
+        elem.querySelector('.services__item-info').style.paddingRight = `${padding}px`
       }
     })
   }

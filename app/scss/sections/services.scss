@@ -53,6 +53,15 @@
     font-size: 22px;
     font-weight: 600;
     line-height: 140%;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      color: #fff;
+      background: #474747;
+    }
+    &:active{
+      background: #1f1f1f;
+    }
   }
   &__price-wrapper {
     font-size: 26px;

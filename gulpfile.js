@@ -14,35 +14,35 @@ const svgSprite     = require("gulp-svg-sprite");
 const fileInclude   = require('gulp-file-include');
 const ftp           = require('vinyl-ftp');
 
-// function deploy() {//на бегет
-//   let connect = ftp.create({
-//     host: 'h92460gw.beget.tech',
-//     user: 'h92460gw_test',
-//     password: 'HzGBTrFB8888!',
-//     parallel: 10,
-//   });
-
-//   let proj = [
-//     'dist/**'
-//   ]
-
-//   return src(proj, {buffer: false}).pipe(connect.newer('/').pipe(connect.dest('/')));
-// }
-
-function deploy() {//на фастфокс в ежики
+function deploy() {//на бегет
   let connect = ftp.create({
-    host: "185.137.235.119",
-    user: "nasachev",
-    password: "mK9pZ6eL1i",
+    host: 'h92460gw.beget.tech',
+    user: 'h92460gw_test',
+    password: 'HzGBTrFB8888!',
     parallel: 10,
   });
 
-  let proj = ["dist/**"];
+  let proj = [
+    'dist/**'
+  ]
 
-  return src(proj, { buffer: false }).pipe(
-    connect.newer("/").pipe(connect.dest("/"))
-  );
+  return src(proj, {buffer: false}).pipe(connect.newer('/').pipe(connect.dest('/')));
 }
+
+// function deploy() {//на фастфокс в ежики
+//   let connect = ftp.create({
+//     host: "185.137.235.119",
+//     user: "nasachev",
+//     password: "mK9pZ6eL1i",
+//     parallel: 10,
+//   });
+
+//   let proj = ["dist/**"];
+
+//   return src(proj, { buffer: false }).pipe(
+//     connect.newer("/").pipe(connect.dest("/"))
+//   );
+// }
 
 function browsersync() {
   browserSync.init({
