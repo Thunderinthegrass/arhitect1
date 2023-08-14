@@ -196,9 +196,8 @@
   @media (max-width: 1334px) {
     width: 1070px;
   }
-  @media (max-width: 1060px) {
-    width: auto;
-    padding: 60px 20px 40px;
+  @media (max-width: 1200px){
+    width: 922px;
     .catalog {
       position: static;
       order: 1;
@@ -229,6 +228,7 @@
     }
   }
   @media (max-width: 992px) {
+    padding: 60px 20px 40px;
     max-width: 712px;
     width: 100%;
     .catalog__request-btn {

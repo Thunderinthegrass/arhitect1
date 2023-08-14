@@ -2,11 +2,11 @@
   &__title {
     margin-bottom: 50px;
   }
-  &__slider{
+  &__slider {
     overflow: hidden;
     padding-bottom: 94px;
     position: relative;
-    .swiper-wrapper{
+    .swiper-wrapper {
       display: inline-flex;
     }
     .slider-arrows {
@@ -14,7 +14,7 @@
       bottom: 0;
     }
   }
-  &-swiper-pagination{
+  &-swiper-pagination {
     bottom: 28px;
   }
   .project {
@@ -24,37 +24,37 @@
     border: 1px solid #474747;
     position: relative;
     flex-shrink: 0;
-    &:hover{
-      .project__img{
+    &:hover {
+      .project__img {
         transform: scale(1.1);
       }
-      .project__title{
-        color: rgba(255, 255, 255, 0.60);
+      .project__title {
+        color: rgba(255, 255, 255, 0.6);
       }
-      .project__arrow{
-        fill: rgba(255, 255, 255, 0.60);
+      .project__arrow {
+        fill: rgba(255, 255, 255, 0.6);
       }
     }
-    &:active{
-      .project__title{
+    &:active {
+      .project__title {
         color: #474747;
       }
-      .project__arrow{
+      .project__arrow {
         fill: #474747;
       }
     }
-    &__more-btn{
+    &__more-btn {
       position: absolute;
       top: 410px;
       right: 20px;
       cursor: pointer;
     }
-    &__arrow{
+    &__arrow {
       width: 30px;
       height: 30px;
       transform: rotate(90deg);
       fill: #ffffff;
-      transition: .3s;
+      transition: 0.3s;
     }
     &__img-wrapper {
       width: 100%;
@@ -67,7 +67,7 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      transition: .3s;
+      transition: 0.3s;
     }
     &__info {
       min-height: 182px;
@@ -81,30 +81,30 @@
       color: #ffffff;
       margin-bottom: 15px;
       padding-right: 65px;
-      transition: .3s;
+      transition: 0.3s;
     }
     &__subtitle {
       font-size: 19px;
       font-weight: 500;
       line-height: 170%;
-      color: rgba(255, 255, 255, 0.60);
+      color: rgba(255, 255, 255, 0.6);
     }
-    &__bottom{
+    &__bottom {
       display: flex;
       justify-content: space-between;
       align-items: end;
       padding: 0 30px;
     }
-    &__logo-wrapper{
+    &__logo-wrapper {
       width: 173px;
       height: 70px;
     }
-    &__logo{
+    &__logo {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    &__order-btn{
+    &__order-btn {
       font-size: 22px;
       font-weight: 600;
       line-height: 140%;
@@ -121,6 +121,70 @@
       &:active {
         color: #1f1f1f;
         background: #a5a5a5;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .container{
+      padding-right: 0;
+    }
+    &__slider {
+      padding-bottom: 0;
+      .slider-arrows {
+        display: none;
+      }
+    }
+    &-swiper-pagination {
+      display: none;
+    }
+    .project {
+      display: flex;
+      flex-direction: column;
+      max-width: 320px;
+      height: 486px;
+      padding-bottom: 15px;
+      &__img-wrapper {
+        height: 146px;
+        margin-bottom: 15px;
+      }
+      &__info {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        min-height: auto;
+      }
+      &__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 140%;
+        padding-right: 60px;
+        margin-bottom: 10px;
+      }
+      &__subtitle {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 160%;
+      }
+      &__more-btn {
+        top: 161px;
+        right: 15px;
+      }
+      &__bottom {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-items: start;
+        flex: 1;
+      }
+      &__logo-wrapper {
+        width: 114px;
+        height: 46px;
+      }
+      &__order-btn {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 140%;
       }
     }
   }
