@@ -62,6 +62,7 @@
     color: #474747;
     top: 20px;
     z-index: 0;
+    transition: .2s;
     &.active {
       font-size: 19px;
       top: 0;

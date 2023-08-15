@@ -11,6 +11,20 @@ const heroSwiper = new Swiper(".hero__slider", {
   },
 });
 
+// const advantages = () => {
+//   let width = document.documentElement.clientWidth;
+//   let slider = document.querySelector('.advantages__slider');
+  
+
+//   if (width <= 1200) {
+//     slider.classList.add('advantages__slider1');
+//   }
+//   else{
+//     slider.classList.remove('advantages__slider1');
+//   }
+// }
+// advantages();
+
 const advantagesSwiper = new Swiper(".advantages__slider", {
     slidesPerView: 0,
     spaceBetween: 30,
@@ -232,7 +246,7 @@ modal();
 
 //placeholder инпутов
 let placeholder = () => {
-  let input = document.querySelectorAll('.modal-form__item');
+  let input = document.querySelectorAll('.form-item');
   let label = document.querySelectorAll('.label');
   
   input.forEach((elem, id) => {
@@ -251,11 +265,12 @@ placeholder();
 
 //увеличивающаяся по мере заполняемости текстом textarea
 let textareaTransfer = () => {
-  let textarea = document.querySelector('.modal-form__textarea');
+  let textarea = document.querySelectorAll('.textarea');
   
-
-  textarea.setAttribute('style', 'height:' + (textarea.scrollHeight) + 'px;overflow-y:hidden;');
-  textarea.addEventListener("input", OnInput, false);
+  textarea.forEach((elem) => {
+    elem.setAttribute('style', 'height:' + (textarea.scrollHeight) + 'px;overflow-y:hidden;');
+    elem.addEventListener("input", OnInput, false);
+  })
 
   function OnInput() {
     this.style.height = 'auto';
@@ -350,13 +365,19 @@ stageTabs();
 
 //размер контейнера секции about в зависимости от ширины экрана
 let aboutWidth = () => {
-  let container = document.querySelector('.about__container');
+  let container = document.querySelectorAll('.stretching-container');
   let width = document.documentElement.clientWidth;
 
-  if (width > 1920) {
-    let paddingContainer = (width - 1760) / 2;
-    container.style.paddingRight = `${paddingContainer}px`;
-  }
+  console.log(container);
+  
+
+  // if (width > 1920) {
+    let paddingContainer = (width - 1760) / 2 + 20;
+
+    container.forEach((elem) => {
+      elem.style.paddingRight = `${paddingContainer}px`;
+    })
+  // }
 }
 aboutWidth();
 
@@ -398,8 +419,12 @@ let servicesWidth = () => {
   let width = document.documentElement.clientWidth;
   const item = document.querySelectorAll('.services__item');
   
-  if (width > 1920) {
+  // if (width => 1720) {
     let padding = (width - 1760) / 2 + 20;
+
+    if (padding <= 20) {
+      padding = 20;
+    }
 
     item.forEach((elem, id) => {
       if (id % 2 == 0) {
@@ -412,6 +437,6 @@ let servicesWidth = () => {
         elem.querySelector('.services__item-info').style.paddingRight = `${padding}px`
       }
     })
-  }
+  // }
 }
 servicesWidth();

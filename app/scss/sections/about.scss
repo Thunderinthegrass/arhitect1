@@ -17,7 +17,6 @@
   }
   &__info-inner {
     width: 920px;
-    // width: 100%;
     margin-left: auto;
   }
   &__title {
@@ -50,6 +49,10 @@
   }
   @media (max-width: 1640px) {
     padding-bottom: 92px;
+    &__info-inner{
+      margin-left: 0;
+      width: auto;
+    }
     &__info {
       z-index: 1;
     }
