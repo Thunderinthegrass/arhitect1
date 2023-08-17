@@ -279,6 +279,9 @@ let textareaTransfer = () => {
 }
 textareaTransfer();
 
+//цвет инпута при автозаполнении
+
+
 // изменение хедера при прокрутке и прилипании
 let scroll = () => {
   if (document.body.clientWidth <= 1110) {

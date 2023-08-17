@@ -1,0 +1,24 @@
+.contacts {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__items {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 55px;
+    align-items: center;
+  }
+  &__item {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #ffffff;
+  }
+  &__address {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: rgba(255, 255, 255, 0.60);
+  }
+}

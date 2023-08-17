@@ -33,7 +33,7 @@
             <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
             <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
             <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="header__contacts">
@@ -1144,7 +1144,7 @@
                   </label>
                 </div>
                 <div class="textarea-wrapper">
-                  <textarea class="form__textarea textarea form-item" rows="1"></textarea>
+                  <textarea id="textarea" class="form__textarea textarea form-item" rows="1"></textarea>
                   <label for="textarea" class="label textarea-label">Сообщение</label>
                 </div>
               </div>
@@ -1158,6 +1158,23 @@
         <div class="form-section__img-wrapper">
           <img class="form-section__img" src="img/form-section/image.jpg" alt="">
         </div>
+      </div>
+    </section>
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2 class="contacts__title section-title">Контакты</h2>
+        <div class="contacts__items">
+          <a href="tel:88000000000" class="contacts__item contacts__phone">
+            8 800 000 00 00
+          </a>
+          <a href="mailto:info@mail.ru" class="contacts__item contacts__mail">
+            info@mail.ru
+          </a>
+          <p class="contacts__item contacts__address">Санкт-Петербург, ул. Лесная, д. 11, офис 255</p>
+        </div>
+      </div>
+      <div class="contacts__map map">
+
       </div>
     </section>
     <div class="modal-overlay">
@@ -1384,6 +1401,8 @@
         </div>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+  </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
