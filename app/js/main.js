@@ -443,3 +443,40 @@ let servicesWidth = () => {
   // }
 }
 servicesWidth();
+
+//яндекс карты
+ymaps.ready(init);
+function init(){
+  let map = new ymaps.Map("map", {
+    center: [60.01861921017354,30.362484260156364],
+    zoom: 14
+  });
+
+  // let myGeoObject = new ymaps.GeoObject({
+  //   geometry: {
+  //       type: "Point", // тип геометрии - точка
+  //       coordinates: [60.01933615364519,30.365091367318847] // координаты точки
+  //   }
+  // });
+  
+  // // Размещение геообъекта на карте.
+  // map.geoObjects.add(myGeoObject); 
+
+  let myPlacemark = new ymaps.Placemark([60.01861921017354,30.362484260156364], {}, { 
+    iconLayout: 'default#image',
+    iconImageHref: '../img/svg/logo-simbol.svg',
+    icon_imagesize: [30, 42],
+    iconImageOffset: [-3, -42]
+});
+
+  map.geoObjects.add(myPlacemark);
+
+  map.controls.remove('geolocationControl'); // удаляем геолокацию
+  map.controls.remove('searchControl'); // удаляем поиск
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+  map.controls.remove('typeSelector'); // удаляем тип
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl'); // удаляем контрол правил
+  // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+}
