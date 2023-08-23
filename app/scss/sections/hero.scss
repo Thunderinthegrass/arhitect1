@@ -49,6 +49,26 @@
       background-position: center;
     }
   }
+  @media (max-width: 1920px){
+    .swiper-slide{
+      background-image: url(../img/hero-slider/hero-img-1920.jpg);
+    }
+  }
+  @media (max-width: 1024px){
+    .swiper-slide{
+      background-image: url(../img/hero-slider/hero-img-1024.jpg);
+    }
+  }
+  @media (max-width: 767px){
+    .swiper-slide{
+      background-image: url(../img/hero-slider/hero-img-767.jpg);
+    }
+  }
+  @media (max-width: 375px){
+    .swiper-slide{
+      background-image: url(../img/hero-slider/hero-img-375.jpg);
+    }
+  }
   @media (max-width: 1420px){
     &__title{
       font-size: 65px;

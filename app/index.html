@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Архитекрурный</title>
+    <link rel="preload" href="img/hero-slider/hero-img-1920.jpg" as="image">
+    <link rel="preload" href="img/hero-slider/hero-img-1024.jpg" as="image">
+    <link rel="preload" href="img/hero-slider/hero-img-767.jpg" as="image">
+    <link rel="preload" href="img/hero-slider/hero-img-375.jpg" as="image"> 
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -307,21 +311,23 @@
         <div class="products__slider products__slider-all active" data-category="all-products">
           <div class="swiper-wrapper">
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки. Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -333,23 +339,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">001</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -357,27 +388,52 @@
                 </button>
                 <p class="product__price-wrapper">
                   от
-                  <span class="product__price">5000</span>
+                  <span class="product__price">8000</span>
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -389,23 +445,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">003</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -417,23 +498,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">004</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -445,23 +551,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -473,6 +604,29 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="slider-arrows">
@@ -492,21 +646,23 @@
         <div class="products__slider products__slider-panels" data-category="panels">
           <div class="swiper-wrapper">
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -518,23 +674,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -546,23 +727,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -574,23 +780,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Фасадные панели из фибробетона
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Изделия с уникальными фактурами реализующие любые Ваши задумки.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-1.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Фасадные панели из фибробетона
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Изделия с уникальными фактурами реализующие любые Ваши задумки.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -602,6 +833,29 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="slider-arrows">
@@ -621,21 +875,23 @@
         <div class="products__slider products__slider-architectural" data-category="architectural">
           <div class="swiper-wrapper">
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -647,23 +903,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -675,23 +956,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -703,23 +1009,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Любая конфигурация по проекту (разнообразие форм и фактур)
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-2.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Любая конфигурация по проекту (разнообразие форм и фактур)
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Мы предлагаем персонализированный подход в производстве изделий для Вашего проекта.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -731,6 +1062,29 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="slider-arrows">
@@ -750,21 +1104,23 @@
         <div class="products__slider products__slider-torrazzo" data-category="torrazzo">
           <div class="swiper-wrapper">
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -776,23 +1132,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -804,23 +1185,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -832,23 +1238,48 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
             <div class="swiper-slide product">
-              <div class="product__img-wrapper modal-btn" data-path="product-modal">
-                <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
-              </div>
-              <div class="product__info">
-                <h3 class="product__title modal-btn" data-path="product-modal">
-                  Имитация под натуральный камень
-                </h3>
-                <button class="product__more-btn modal-btn" data-path="product-modal">
-                  <svg class="product__arrow">
-                    <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
-                  </svg>
-                </button>
-                <p class="product__descr modal-btn" data-path="product-modal">
-                  Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
-                </p>
+              <div class="product__top modal-btn" data-path="product-modal">
+                <div class="product__img-wrapper">
+                  <img src="img/products/product-3.jpg" class="product__img" alt="Фото продукта">
+                </div>
+                <div class="product__info">
+                  <h3 class="product__title">
+                    Имитация под натуральный камень
+                  </h3>
+                  <button class="product__more-btn" aria-label="подробнее о продукте">
+                    <svg class="product__arrow">
+                      <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
+                    </svg>
+                  </button>
+                  <p class="product__descr">
+                    Наши мастера создают неповторимые фактуры имитирующие натуральный камень.
+                  </p>
+                </div>
               </div>
               <div class="product__bottom">
                 <button class="product__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
@@ -860,6 +1291,29 @@
                   &#8381;
                 </p>
               </div>
+              <ul class="product__parameters">
+                <span class="product__parameters-vendor-code">002</span>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Макс. размер изделия</span>
+                  <span class="parameter-value">до 100 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Мин. размер изделия</span>
+                  <span class="parameter-value">от 10 м</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
+                </li>
+                <li class="parameter">
+                  <span class="parameter-name">Материал</span>
+                  <span class="parameter-value">фибробетона, смесь</span>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="slider-arrows">
@@ -956,7 +1410,7 @@
         <div class="projects__slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -974,13 +1428,13 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/1.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
             </div>
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -998,13 +1452,13 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/2.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
             </div>
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -1022,13 +1476,13 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/1.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
             </div>
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -1046,13 +1500,13 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/2.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
             </div>
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -1070,13 +1524,13 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/1.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
             </div>
             <div class="swiper-slide project">
-              <button class="project__more-btn modal-btn" data-path="project-modal">
+              <button class="project__more-btn modal-btn" aria-label="подробнее" data-path="project-modal">
                 <svg class="project__arrow">
                   <use xlink:href="img/sprite/sprite.svg#stage-arrow"></use>
                 </svg>
@@ -1094,7 +1548,7 @@
                 <div class="project__logo-wrapper">
                   <img src="img/projects/projects-logo/2.jpg" alt="логотип проекта" class="project__logo">
                 </div>
-                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="заказать" data-path="modal-form">
+                <button class="project__order-btn request-btn modal-btn" type="button" aria-label="Хочу так же" data-path="modal-form">
                   Хочу так же
                 </button>
               </div>
@@ -1124,22 +1578,22 @@
             <div class="form__inputs">
               <div class="form__inputs-row">
                 <div class="input-wrapper">
-                  <input type="text" id="name-input" class="form__input name-input form-item">
-                  <label for="name-input" class="label name-label">
+                  <input type="text" id="form-name-input" class="form__input name-input form-item">
+                  <label for="form-name-input" class="label name-label">
                     ФИО
                   </label>
                 </div>
                 <div class="input-wrapper">
-                  <input type="text" id="tel-input" class="form__input tel-input form-item">
-                  <label for="tel-input" class="label name-label">
+                  <input type="text" id="form-tel-input" class="form__input tel-input form-item">
+                  <label for="form-tel-input" class="label name-label">
                     Контактный телефон
                   </label>
                 </div>
               </div>
               <div class="form__inputs-row">
                 <div class="input-wrapper">
-                  <input type="text" id="company-input" class="form__input company-input form-item">
-                  <label for="company-input" class="label name-label">
+                  <input type="text" id="form-company-input" class="form__input company-input form-item">
+                  <label for="form-company-input" class="label name-label">
                     Название компании
                   </label>
                 </div>
@@ -1333,41 +1787,22 @@
         </div>
         <div class="product__modal-info product-info">
           <h3 class="product-info__title">
-            Имитация под натуральный камень
+            
           </h3>
           <p class="product-info__vendor-code">
-            Артикул: <span class="vendor-code">003</span>
+            Артикул: <span class="vendor-code"></span>
           </p>
           <p class="product-info__subtitle">
-            Наши мастера создают неповторимые фактуры, имитирующие натуральный камень.
+            
           </p>
           <p class="product-info__price-wrapper">
             от
-            <span class="product-info__price">5000</span>
+            <span class="product-info__price"></span>
             &#8381;
           </p>
         </div>
         <ul class="product-info__parameters">
-          <li class="product-info__parameter parameter">
-            <span class="parameter-name">Материал</span>
-            <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
-          </li>
-          <li class="product-info__parameter parameter">
-            <span class="parameter-name">Макс. размер изделия</span>
-            <span class="parameter-value">до 100 м</span>
-          </li>
-          <li class="product-info__parameter parameter">
-            <span class="parameter-name">Мин. размер изделия</span>
-            <span class="parameter-value">от 10 м</span>
-          </li>
-          <li class="product-info__parameter parameter">
-            <span class="parameter-name">Материал</span>
-            <span class="parameter-value">фибробетона, смесь: материал 1, материал 2, материал 3</span>
-          </li>
-          <li class="product-info__parameter parameter">
-            <span class="parameter-name">Материал</span>
-            <span class="parameter-value">фибробетона, смесь</span>
-          </li>
+          
         </ul>
       </div>
       <div class="project-modal modal" data-target="project-modal">
@@ -1445,8 +1880,7 @@
         </div>
       </div>
     </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
-  </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3b1ea321-3c33-47be-a99c-3e6fe0a71c07&lang=ru_RU"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

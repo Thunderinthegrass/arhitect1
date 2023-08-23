@@ -11,20 +11,6 @@ const heroSwiper = new Swiper(".hero__slider", {
   },
 });
 
-// const advantages = () => {
-//   let width = document.documentElement.clientWidth;
-//   let slider = document.querySelector('.advantages__slider');
-  
-
-//   if (width <= 1200) {
-//     slider.classList.add('advantages__slider1');
-//   }
-//   else{
-//     slider.classList.remove('advantages__slider1');
-//   }
-// }
-// advantages();
-
 const advantagesSwiper = new Swiper(".advantages__slider", {
     slidesPerView: 0,
     spaceBetween: 30,
@@ -370,8 +356,6 @@ stageTabs();
 let aboutWidth = () => {
   let container = document.querySelectorAll('.stretching-container');
   let width = document.documentElement.clientWidth;
-
-  console.log(container);
   
 
   // if (width > 1920) {
@@ -445,22 +429,13 @@ let servicesWidth = () => {
 servicesWidth();
 
 //яндекс карты
-ymaps.ready(init);
+let int = setTimeout(() => {
+  ymaps.ready(init);
 function init(){
   let map = new ymaps.Map("map", {
     center: [60.01861921017354,30.362484260156364],
     zoom: 14
   });
-
-  // let myGeoObject = new ymaps.GeoObject({
-  //   geometry: {
-  //       type: "Point", // тип геометрии - точка
-  //       coordinates: [60.01933615364519,30.365091367318847] // координаты точки
-  //   }
-  // });
-  
-  // // Размещение геообъекта на карте.
-  // map.geoObjects.add(myGeoObject); 
 
   let myPlacemark = new ymaps.Placemark([60.01861921017354,30.362484260156364], {}, { 
     iconLayout: 'default#image',
@@ -480,3 +455,65 @@ function init(){
   map.controls.remove('rulerControl'); // удаляем контрол правил
   // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
+}, 1200);
+
+let dataPopup = () => {
+  let product = document.querySelectorAll('.product');
+
+  product.forEach((elem) => {
+    let productInfo = elem.querySelector('.product__top');
+    let productInfoParameters = document.querySelector('.product-info__parameters');
+    
+    productInfo.addEventListener('click', (e) => {//по нажатию на продукт
+      let parameters = e.currentTarget.closest('.product').querySelectorAll('.parameter');
+
+      if (productInfoParameters.hasChildNodes()) {
+        productInfoParameters.innerHTML = '';
+      }
+
+      if (parameters) {//добавляем всю шнягу в попап
+
+        for (let i = 0; i < parameters.length; i++) {
+          let name = parameters[i].querySelector('.parameter-name').innerHTML;
+          let value = parameters[i].querySelector('.parameter-value').innerHTML;
+
+          let productInfoParameter = document.createElement('li');
+          productInfoParameter.classList.add('product-info__parameter');
+          productInfoParameter.classList.add('parameter');
+          productInfoParameters.appendChild(productInfoParameter);
+
+          let parameterName = document.createElement('span');
+          parameterName.classList.add('parameter-name');
+          productInfoParameter.appendChild(parameterName)
+          parameterName.innerHTML = name;
+
+          let parameterValue = document.createElement('span');
+          parameterValue.classList.add('parameter-value');
+          productInfoParameter.appendChild(parameterValue)
+          parameterValue.innerHTML = value;
+        }
+      }
+
+      let vendorCode = e.currentTarget.closest('.product').querySelector('.product__parameters-vendor-code');
+      if (vendorCode) {
+        document.querySelector('.vendor-code').innerHTML = vendorCode.innerHTML;
+      }
+
+      let productTitle = e.currentTarget.closest('.product').querySelector('.product__title');
+      if (productTitle) {
+        document.querySelector('.product-info__title').innerHTML = productTitle.innerHTML;
+      }
+
+      let productDescr = e.currentTarget.closest('.product').querySelector('.product__descr');
+      if (productDescr) {
+        document.querySelector('.product-info__subtitle').innerHTML = productDescr.innerHTML;
+      }
+
+      let productPrice = e.currentTarget.closest('.product').querySelector('.product__price');
+      if (productPrice) {
+        document.querySelector('.product-info__price').innerHTML = productPrice.innerHTML;
+      }
+    })
+  })
+}
+dataPopup();

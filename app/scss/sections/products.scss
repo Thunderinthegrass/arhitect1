@@ -176,6 +176,9 @@
       line-height: 140%;
       color: #ffffff;
     }
+    &__parameters{
+      display: none;
+    }
   }
   @media (max-width: 1400px) {
     .filters__btn {
