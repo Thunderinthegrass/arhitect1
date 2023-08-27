@@ -523,26 +523,20 @@ dataPopupProduct();
 
 let dataPopupProject = () => {
   let project = document.querySelectorAll('.project__top');
-  let projectModal = document.querySelector('.project-modal');
   let modalTitle = document.querySelector('.project-modal__title');
   let modalDate = document.querySelector('.project-modal__date');
   let modalLogo = document.querySelector('.project-modal-logo');
-  let slider = document.querySelector('.project-modal__slider');
-  slider = slider.querySelector('.swiper-wrapper');
-  let parameters = document.querySelector('.project-modal__parameters');
+  let projectModalParameters = document.querySelector('.project-modal__parameters');
+  
   let modalInfo = document.querySelector('.project-modal__info');
   let projectModalSliderWrapper = document.querySelector('.project-modal__slider-wrapper');
   
-
   project.forEach((elem) => {
     let title = elem.querySelector('.project__title');
     let logo = elem.closest('.project').querySelector('.project__logo').getAttribute('src');
     
-
     let date = elem.querySelector('.project__date');
     let info = elem.querySelector('.project__data-info');
-    
-    let parameter = document.querySelectorAll('.project__parameter');
 
     elem.addEventListener('click', () => {
       modalTitle.textContent = title.textContent;
@@ -550,34 +544,49 @@ let dataPopupProject = () => {
       modalLogo.setAttribute('src', logo);
       modalInfo.textContent = info.textContent;
 
-      let pagin = document.querySelector('.project-modal__pagination');
-      
-      projectModalSliderWrapper.removeChild(pagin);
+      projectModalParameters.innerHTML = '';
+      let projectParameters = elem.querySelector('.project__parameters').innerHTML;
+      projectModalParameters.innerHTML = projectParameters;
+
+      projectModalSliderWrapper.innerHTML = '';
+
       let imgSlider = elem.querySelectorAll('.project__slider-img');
-      slider.innerHTML = '';
+
+      let projectModalSlider = document.createElement('div');
+      projectModalSlider.classList.add('project-modal__slider');
+      projectModalSliderWrapper.appendChild(projectModalSlider);
+
+      let swiperWrapper = document.createElement('div');
+      swiperWrapper.classList.add('swiper-wrapper');
+      projectModalSlider.appendChild(swiperWrapper);
+
+      let arrowPrev = document.createElement('div');
+      arrowPrev.classList.add('project-slider-button-prev');
+      arrowPrev.innerHTML = `<svg class="arrow-prev slider-arrow"><use xlink:href="img/sprite/sprite.svg#slider-arrow"></use></svg>`;
+      projectModalSliderWrapper.appendChild(arrowPrev)
+
+      let arrowNext = document.createElement('div');
+      arrowNext.classList.add('project-slider-button-next');
+      arrowNext.innerHTML = `<svg class="arrow-prev slider-arrow"><use xlink:href="img/sprite/sprite.svg#slider-arrow"></use></svg>`;
+      projectModalSliderWrapper.appendChild(arrowNext)
+      
+      let pagination = document.createElement('div');
+      pagination.classList.add('project-modal__pagination');
+      projectModalSliderWrapper.appendChild(pagination);
 
       for (let i = 0; i < imgSlider.length; i++) {
         let slide = document.createElement('div');
         slide.classList.add('swiper-slide', 'project__modal-slide');
+        swiperWrapper.appendChild(slide)
 
         let img = document.createElement('img');
         img.classList.add('project-modal__img');
         img.setAttribute('alt', 'фото проекта');
         img.setAttribute('src', `${imgSlider[i].getAttribute('src')}`);
         slide.appendChild(img);
-
-        slider.appendChild(slide);
-
-        if (i == 0) {
-          let pagination = document.createElement('div');
-          pagination.classList.add('project-modal__pagination');
-          projectModalSliderWrapper.appendChild(pagination);
-        }
-
-        projectsModalSlider();
       }
+      projectsModalSlider();
     })
   })
-  
 }
 dataPopupProject();

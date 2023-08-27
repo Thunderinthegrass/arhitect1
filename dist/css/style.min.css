@@ -1324,6 +1324,7 @@ section {
 .project-modal .project-slider-button-next.swiper-button-disabled,
 .project-modal .project-slider-button-prev.swiper-button-disabled {
   opacity: 0;
+  display: none;
 }
 .project-modal .project-slider-button-prev {
   left: 10px;
