@@ -2312,6 +2312,9 @@ section {
   line-height: 140%;
   color: #ffffff;
 }
+.products .product__parameters {
+  display: none;
+}
 @media (max-width: 1400px) {
   .products .filters__btn {
     font-size: 17px;
@@ -2621,11 +2624,13 @@ section {
 .projects .project:active .project__arrow {
   fill: #474747;
 }
+.projects .project__top {
+  cursor: pointer;
+}
 .projects .project__more-btn {
   position: absolute;
   top: 410px;
   right: 20px;
-  cursor: pointer;
 }
 .projects .project__arrow {
   width: 30px;
@@ -2641,7 +2646,6 @@ section {
   width: 100%;
   height: 380px;
   margin-bottom: 30px;
-  cursor: pointer;
   overflow: hidden;
 }
 .projects .project__img {
@@ -2655,7 +2659,6 @@ section {
 .projects .project__info {
   min-height: 182px;
   padding-left: 30px;
-  cursor: pointer;
 }
 .projects .project__title {
   font-size: 26px;
@@ -2714,6 +2717,9 @@ section {
 .projects .project__order-btn:active {
   color: #1f1f1f;
   background: #a5a5a5;
+}
+.projects .project__data {
+  display: none;
 }
 @media (max-width: 1200px) {
   .projects .container {

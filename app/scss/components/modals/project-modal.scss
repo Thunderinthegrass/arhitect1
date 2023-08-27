@@ -140,6 +140,7 @@
     }
     &.swiper-button-disabled {
       opacity: 0;
+      display: none;
     }
   }
   .project-slider-button-prev {
